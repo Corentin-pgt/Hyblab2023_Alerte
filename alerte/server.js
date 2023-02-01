@@ -15,8 +15,9 @@ let db = new sqlite3.Database('./alerte/myDB.db', (err) => {
 });
 
 db.serialize(function () {
-    db.run("CREATE TABLE IF NOT EXISTS QCM (id INTEGER PRIMARY KEY, r1 Reponse)")
-    db.run("CREATE TABLE IF NOT EXISTS Reponse (id INTEGER PRIMARY KEY, libelle VARCHAR )")
+    db.run("CREATE TABLE IF NOT EXISTS Departement(id INTEGER PRIMARY KEY, qcm_id INTEGER, FOREIGN KEY (qcm_id) REFERENCES QCM(id))")
+    db.run("CREATE TABLE IF NOT EXISTS QCM (id INTEGER PRIMARY KEY, reponse_id INTEGER, FOREIGN KEY (reponse_id) REFERENCES Reponse(id))")
+    db.run("CREATE TABLE IF NOT EXISTS Reponse (id INTEGER PRIMARY KEY, valeur TEXT, correct BOOLEAN)")
 })
 
 
