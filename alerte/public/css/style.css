@@ -463,6 +463,13 @@ main>section {
     min-height: 237px;
 }
 
+#repS6 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+
 /* ---------- Positionning of logos on the last slide -------------------- */
 /* here we have a contraint on the height of the logos (not the width)     */
 /* so we cannot use % and use em (which are proportinal to the size of the */

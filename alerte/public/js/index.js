@@ -3,13 +3,13 @@
 let dep
 
 function changeBackground(color) {
-  document.body.style.background = color;
+    document.body.style.background = color;
 }
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-  display("s1")
-  changeBackground('#121212')
+    display("s1")
+    changeBackground('#121212')
 })
 
 let next1 = document.getElementById("next1")
@@ -62,22 +62,26 @@ let path;
 let isDrawing = false;
 
 view.onMouseDown = (event) => {
-  isDrawing = true;
-  path = new Path();
-  path.strokeColor = "white";
-  path.smoothness = 1;
-  path.strokeWidth = 5;
-  path.add(event.point);
+    if (isDrawing) return;
+    event.preventDefault();
+    isDrawing = true;
+    path = new Path();
+    path.strokeColor = "white";
+    path.smoothness = 1;
+    path.strokeWidth = 5;
+    path.add(event.point);
 };
 
 view.onMouseDrag = (event) => {
-  if (!isDrawing) return;
-  path.add(event.point);
+    if (!isDrawing) return;
+    path.add(event.point);
 };
 
-view.onMouseUp = () => {
-  isDrawing = false;
-  display("s6")
+view.onMouseUp = (event) => {
+    if (!isDrawing) return;
+    event.preventDefault();
+    isDrawing = false;
+    display("s6")
 };
 
 
