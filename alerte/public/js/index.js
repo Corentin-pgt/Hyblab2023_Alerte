@@ -37,7 +37,7 @@ function changeBackground(color) {
 
 let next0 = document.getElementById("next0")
 next0.addEventListener("click", () => {
-    display("s1")
+    display("s5")
     changeBackground('#121212')
 })
 
@@ -84,31 +84,20 @@ next4_2.addEventListener("click", () => {
     changeBackground('#121212')
 })
 
-paper.install(window);
-paper.setup("canvas");
+/*
+Texte superposé au canva
 
-let path;
-let isDrawing = false;
 
-view.onMouseDown = (event) => {
-    isDrawing = true;
-    path = new Path();
-    path.strokeColor = "white";
-    path.smoothness = 1;
-    path.strokeWidth = 5;
-    path.add(event.point);
-};
+var canvas = document.getElementById("canvas");
+console.log(canvas)
+var context = canvas.getContext("2d");
+console.log(canvas.getContext("2d"))
+context.fillStyle = "grey";
+context.font = "18px Arial";
+context.fillText("Allez-y, essayez d'en", (canvas.width / 2) - 85, (canvas.height / 2) - 10);
+context.fillText("dessiner le diagramme", (canvas.width / 2) - 90, (canvas.height / 2) + 26);
 
-view.onMouseDrag = (event) => {
-    if (!isDrawing) return;
-    path.add(event.point);
-};
-
-view.onMouseUp = () => {
-    isDrawing = false;
-    display("s6")
-};
-
+*/
 
 let next6 = document.getElementById("next6")
 next6.addEventListener("click", () => {
@@ -321,3 +310,4 @@ var mySwiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
     },
 });
+

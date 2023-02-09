@@ -1,0 +1,12 @@
+#chartdiv {
+  border: solid white 2px;
+  border-radius: 27px;
+  min-width: 275px;
+  min-height: 237px;
+  width: 100%;
+}
+
+.ampopup-content {
+  background: rgb(60, 171, 255)!important;
+  background-color: rgba(60, 171, 255, 0.8)!important;
+}

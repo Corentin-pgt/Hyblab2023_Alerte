@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Hyblab 2023</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-graph-drawing.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
     <script src="js/slide10.js" defer></script>
+    <script src="js/graph-drawing.js" defer></script>
     <script src="js/index.js" defer></script>
 </head>
 
@@ -195,7 +200,7 @@
                         </div>
                     </div>
                 </div>
-                <canvas id="canvas"></canvas>
+                <div id="chartdiv"></div>
             </section>
 
             <section id="s6" class="slides" style="display: none">
